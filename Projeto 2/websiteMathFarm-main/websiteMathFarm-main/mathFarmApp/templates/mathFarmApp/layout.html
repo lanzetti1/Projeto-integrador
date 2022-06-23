@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="stylesheet" href="{% static 'mathFarmApp/styles.css' %}">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+      <!-- MARVELOUS TAG TO AVOID FLAVICON REQUESTS -->
+      <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
+      {% block head %}
+      {% endblock %}
+    </head>
+    <body>
+        <header>
+            <p>Comeco do cabecalho do layout.html</p>
+            <div>
+              {% if user.is_authenticated %}
+                  Signed in as <strong>{{ user.username }}</strong>
+              {% else %}
+                  Usuario nao logado.
+              {% endif %}
+            </div>
+            <ul class="nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'index' %}">Pagina principal</a>
+              {% if user.is_authenticated %}
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'logout' %}">Sair</a>
+                  </li>
+              {% else %}
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'login' %}">Entrar</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'register' %}">Registrar usuario</a>
+                  </li>
+              {% endif %}
+            </ul>
+            <p>Fim do cabecalho do layout.html</p>
+        </header>
+        {% block body %}
+        {% endblock %}
+    </body>
+
+    <footer>
+      <p>Rodape do layout.html</p>
+    </footer>
+</html>

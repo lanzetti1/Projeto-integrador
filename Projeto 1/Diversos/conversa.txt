@@ -1,0 +1,13 @@
+O grupo indicou parcialmente as estratégias adotadas para: coleta de dados (observação, entrevista, formulário, questionário, etc.) e como ela foi construída; realizar a análise dos dados (pesquisa qualitativa, quantitativa ou métodos mistos). Além disso, o grupo indicou a comunidade externa participante da pesquisa sem detalhar o contexto onde o projeto foi realizado; e o perfil dos sujeitos participantes, se for o caso. O grupo não demonstrou como os passos (ouvir, criar e prototipar) do Design Thinking foram ou serão desenvolvidos.
+Comentário:
+Não ficou claro o que será desenvolvido pelo grupo, quais modificações serão implementadas partindo do website já existente.
+
+O texto do grupo apresenta problemas quanto às normas da língua portuguesa ou quanto ao uso da ABNT. OU, não apresenta algum dos itens: capa, sumário, resumo, palavras-chave, listas.
+Comentário:
+Ajustes recomendados para o relatório final: -Ajustar a formatação da fonte do texto -Remover as referências não pertinentes ao trabalho
+
+Verificar possibilidade de reunir o grupo inteiro para auto-avaliação no dia 24/11/2021 20:30 hs.
+
+Verificar a solução funcinando, imagens, acesso a pagina, explicações sobre o conteúdo.
+
+

@@ -1,0 +1,9 @@
+{% extends "mathFarmApp/layout.html" %}
+
+{% block body %}
+    {% for i in typesOfExercise %}
+    <p>
+        <a href="{% url 'exercise' i %}">{{ i }}</a>
+    </p>
+{% endfor %}
+{% endblock %}

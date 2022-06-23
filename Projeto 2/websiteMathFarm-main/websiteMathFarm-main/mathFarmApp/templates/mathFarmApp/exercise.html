@@ -1,0 +1,37 @@
+{% extends "mathFarmApp/layout.html" %}
+{% load static %}
+
+{% block head %}
+    <script> 
+        var operationType = "{{ type }}"
+        var verbOfOperation = "{{ verb }}"
+        var user_points = "{{ user_points }}"
+    </script>
+    <script src="{% static 'mathFarmApp/utils.js' %}"></script>
+    <script src="{% static 'mathFarmApp/script.js' %}"></script>
+{% endblock %}
+
+
+{% block body %}
+    <h2 id="current_score"></h2>
+    <h2>Aqui esta seu exercicio de {{ type }}! Boa sorte!</h2>
+    <h2 id="question"></h2>
+    <form action="{% url 'exercise' '{{ type }}' %}" method="post" id="answer_form">
+        {% csrf_token %}
+        <div class="form-group">
+            <!-- <label for="answer">Answer</label> -->
+            <input type="hidden" name="action" value="nullValue" id="score">
+            <input type="hidden" name="type" value="{{ type }}" id="score">
+            <input type="hidden" name="verb" value="{{ verb }}" id="score">
+            <input class="form-control" id="answer" placeholder="Enter your answer">
+        </div>
+        <button type="submit" class="btn btn-primary" id="answer_button">Resposta</button>
+        <button type="submit" class="btn btn-primary" id="next_button">Continuar</button>
+    </form>
+    <div class="alert alert-success d-none" id="correct_alert" role="alert">
+        Voce acertou e ganhou um ponto. 
+    </div>
+    <div class="alert alert-danger d-none" id="incorrect_alert"role="alert">
+        Voce errou - tente de novo. 
+    </div>
+{% endblock %}
